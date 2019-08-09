@@ -1,6 +1,7 @@
-resource "tfe_policy_set" "tags" {
-  name                   = "tags-enforced"
-  description            = "A brand new policy set"
-  organization           = "hashicorp-rachel"
-  policies_path          = "github.com/tr0njavolta/Sentinel-Training"
+resource "tfe_sentinel_policy" "test" {
+  name         = "my-policy-name"
+  description  = "This policy always passes"
+  organization = "my-org-name"
+  policy       = "main = rule { true }"
+  enforce_mode = "hard-mandatory"
 }
