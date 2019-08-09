@@ -1,4 +1,4 @@
-resource "tfe_sentinel_policy" "tags" {
+resource "tfe_sentinel_policy" "test" {
   name         = "tags-enforced"
   description  = "Resources must be tagged"
   organization = "hashicorp-rachel"
