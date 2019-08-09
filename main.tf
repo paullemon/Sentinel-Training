@@ -1,7 +1,7 @@
-resource "tfe_sentinel_policy" "test" {
-  name         = "my-policy-name"
-  description  = "This policy always passes"
-  organization = "my-org-name"
+resource "tfe_sentinel_policy" "tags" {
+  name         = "tags-enforced"
+  description  = "Resources must be tagged"
+  organization = "hashicorp-rachel"
   policy       = <<EOT
 import "tfplan"
 
