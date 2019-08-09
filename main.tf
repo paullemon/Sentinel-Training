@@ -2,7 +2,7 @@ resource "tfe_sentinel_policy" "tags" {
   name         = "tags-enforced"
   description  = "Resources must be tagged"
   organization = "hashicorp-rachel"
-  policy       = <<EOT
+  policy       = "
 import "tfplan"
 
 main = rule {
@@ -11,8 +11,7 @@ main = rule {
 			(length(r.applied.tags) else 0) > 0
 		}
 	}
-}
-EOT
+}"
   enforce_mode = "hard-mandatory"
 }
 
