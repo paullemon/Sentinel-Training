@@ -1,3 +1,3 @@
-policy "tags_enforced" {
-    enforcement_level = "hard-mandatory"
+policy "instance_enforced" {
+    enforcement_level = "soft-mandatory"
 }
